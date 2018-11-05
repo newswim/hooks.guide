@@ -201,7 +201,7 @@ export default function Preview(props) {
       </TabFrame>
       <Footer>
         <ImproveThisDoc href={`${RepoUrl}${props.item.path}`} target="_blank">
-          💄 Improve this hook
+          <span role="img" aria-label="lipstick">💄</span> Improve this hook
         </ImproveThisDoc>
       </Footer>
       <Contributors contributors={contributors} />
