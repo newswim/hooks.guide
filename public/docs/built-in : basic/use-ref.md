@@ -12,7 +12,7 @@ https://reactjs.org/docs/hooks-reference.html#useref
 
 # usage
 
-```
+```js
 function Demo() {
   const inputEl = useRef(null);
   const onButtonClick = () => {

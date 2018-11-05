@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { Link, NavLink } from "react-router-dom";
-import hooks from "./docs.js";
-import LogoComp from "./logo";
-import { highlightColor } from "./theme";
+import React from 'react'
+import styled from 'styled-components'
+import { Link, NavLink } from 'react-router-dom'
+import hooks from './docs.js'
+import LogoComp from './logo'
+import { highlightColor } from './theme'
 
-import "typeface-nunito";
+import 'typeface-nunito'
 
 const Container = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ const Container = styled.div`
     padding-left: 10px;
     border-right: none;
   }
-`;
+`
 
 const Logo = styled.div`
   font-size: 25px;
@@ -31,11 +31,11 @@ const Logo = styled.div`
   @media (max-width: 700px) {
     display: none;
   }
-`;
+`
 
 const Highlight = styled.span`
   color: ${highlightColor};
-`;
+`
 
 const SectionHeader = styled.div`
   padding-bottom: 0;
@@ -44,13 +44,13 @@ const SectionHeader = styled.div`
   padding-top: 0;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-family: "League Spartan", sans-serif;
+  font-family: 'League Spartan', sans-serif;
   line-height: 1.1;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 30px 0 10px;
-`;
+`
 
 const Item = styled.div`
   cursor: pointer;
@@ -64,7 +64,7 @@ const Item = styled.div`
       color: ${highlightColor};
     }
   }
-`;
+`
 
 export default function() {
   return (
@@ -75,38 +75,43 @@ export default function() {
         </Link>
       </Logo>
       {Object.entries(hooks)
-        .filter(([key]) => key !== "community")
+        .filter(([key]) => key !== 'community')
         .map(([key, value]) => {
+          // // hacky way to fix folder naming
+          // let title = key.includes('advanced')
+          //   ? 'Built-in : Advanced'
+          //   : key.includes('basic')
+          //     ? 'Built-in : Basic'
+          //     : key
           return (
-            <div>
+            <div key={key}>
               <SectionHeader>{key}</SectionHeader>
               {value.map(item => {
                 return (
-                  <Item>
+                  <Item key={item.name}>
                     <NavLink
                       activeStyle={{ color: highlightColor }}
-                      to={`/${key}/${item.name}`}
-                    >
+                      to={`/${key}/${item.name}`}>
                       {item.name}
                     </NavLink>
                   </Item>
-                );
+                )
               })}
             </div>
-          );
+          )
         })}
       {
         <div>
           <SectionHeader>Community</SectionHeader>
-          {hooks.community.map(item => {
+          {hooks.community.map(({name}) => {
             return (
-              <Item>
-                <Link to={`/community/${item.name}`}>{item.name}</Link>
+              <Item key={name}>
+                <Link to={`/community/${name}`}>{name}</Link>
               </Item>
-            );
+            )
           })}
         </div>
       }
     </Container>
-  );
+  )
 }

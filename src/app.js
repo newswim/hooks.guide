@@ -47,9 +47,10 @@ class App extends Component {
           <Route path="/" exact render={() => <Landing />} />
           <Suspense fallback={<Loading />} maxDuration={1000}>
             {Object.entries(hooks).map(([key, value]) => {
-              return value.map(item => {
+              return value.map((item) => {
                 return (
                   <Route
+                    key={item.name}
                     path={`/${key}/${item.name}`}
                     render={() => <Preview item={item} />}
                   />

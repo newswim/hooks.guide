@@ -49,8 +49,8 @@ export default function Contributors({ contributors }) {
       <ContributorsContainer>
         {contributors.map(contributor => {
           return (
-            <Contributor>
-              <a href={contributor.url} target="_blank">
+            <Contributor key={contributor.name}>
+              <a href={contributor.url} target="_blank" rel="noopener noreferrer">
                 <Avatar src={contributor.avatar} />
               </a>
               <Name href={contributor.url} target="_blank">

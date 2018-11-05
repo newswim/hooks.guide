@@ -12,7 +12,7 @@ The Effect Hook lets you perform side effects in function components
 
 # usage
 
-```
+```js
 function Demo() {
   const [count, setCount] = useState(0);
 

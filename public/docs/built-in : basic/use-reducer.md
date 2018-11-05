@@ -12,7 +12,7 @@ An alternative to useState. Accepts a reducer of type `(state, action) => newSta
 
 # usage
 
-```
+```js
 const initialState = {count: 0};
 
 function reducer(state, action) {

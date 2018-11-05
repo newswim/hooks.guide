@@ -135,7 +135,7 @@ export default function Preview(props) {
     description
   } = parse(doc);
 
-  const [nameValue, setName] = useState(name);
+  const [nameValue /*, setName */] = useState(name);
   const [hookValue, setHook] = useState(hook);
   const [usageValue, setUsage] = useState(usage);
 
