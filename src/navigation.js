@@ -77,12 +77,6 @@ export default function() {
       {Object.entries(hooks)
         .filter(([key]) => key !== 'community')
         .map(([key, value]) => {
-          // // hacky way to fix folder naming
-          // let title = key.includes('advanced')
-          //   ? 'Built-in : Advanced'
-          //   : key.includes('basic')
-          //     ? 'Built-in : Basic'
-          //     : key
           return (
             <div key={key}>
               <SectionHeader>{key}</SectionHeader>
