@@ -33,10 +33,6 @@ const Logo = styled.div`
   }
 `
 
-const Highlight = styled.span`
-  color: ${highlightColor};
-`
-
 const SectionHeader = styled.div`
   padding-bottom: 0;
   padding-left: 0;
