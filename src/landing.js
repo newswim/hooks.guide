@@ -41,16 +41,7 @@ const Instructions = styled.div`
 const Instruction = styled.div`
   padding-left: 5px;
   margin-top: 5px;
-  margin-bottom; 5px;
-`;
-
-const Logo = styled.div`
-  font-size: 35px;
   margin-bottom: 5px;
-  display: none;
-  @media (max-width: 700px) {
-    display: block;
-  }
 `;
 
 const RepoLink = styled.div`
@@ -74,7 +65,7 @@ export default function Landing() {
           Collection of <Highlight>React hooks</Highlight> curated by the
           community
         </SubTitle>
-        <Instruction>💡 All examples are interactive.</Instruction>
+        <Instruction><span role="img" aria-label="lightbulb">💡</span> All examples are interactive.</Instruction>
 
         <Instructions>
           Contribute
