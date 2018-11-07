@@ -7,7 +7,6 @@ import React, {
   useLayoutEffect
 } from "react";
 import { Link } from "react-router-dom";
-import { Flex } from "reflexbox";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
@@ -36,20 +35,10 @@ const Container = styled.div`
   }
 `;
 
-const Name = styled.div`
-  font-size: 30px;
-  font-weight: 400;
-`;
-
 const Reference = styled.a`
   font-size: 15px;
   text-decoration: none;
   color: ${highlightColor};
-`;
-
-const SubTitle = styled.div`
-  font-size: 20px;
-  margin-bottom: 10px;
 `;
 
 const ImproveThisDoc = styled.a`
@@ -74,33 +63,6 @@ const Console = styled.div`
   border-radius: 0 5px 5px 5px;
   color: white;
   max-width: 900px;
-`;
-
-const ConsoleItem = styled.div`
-  color: wheat;
-`;
-
-const Menus = styled.div`
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  right: 15px;
-  top: 5px;
-  z-index: 99;
-  font-size: 13px;
-`;
-const Menu = styled.div`
-  display: inline-block;
-  color: wheat;
-  right: 0;
-  padding: 2px;
-  border-radius: 3px;
-  margin-left: 10px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: gray;
-  }
 `;
 
 const Header = styled.div`
